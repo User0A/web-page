@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>SING UP | Web page</title>
+  <link rel="stylesheet" href="../index.css">
+</head>
+<body>
+<div id="block_top">
+  <div id="block_top_left">
+    <div id="block_top_left_img">
+    </div>
+    <div id="block_top_left_txt">
+      <a><h1 id="h1_top">Веб-технлогоії та веб-дизайн</h1></a>
+      <h2>Служба озброєння ВВНЗ</h2>
+    </div>
+  </div>
+  <div id="block_top_right">
+    <div id="block_top_right_buttons">
+      <div id="block_top_right_buttons_all">
+        <h3 id="block_top_right_txt">| Реєстрація</h3>
+      </div>
+    </div>
+  </div>
+</div>
+<div id="block_middle_sing">
+  <div id="block_middle_info_sing">
+    <div id="block_middle_info_inside">
+      <h2>Ласкаво просимо до веб-порталу служби озброєння ВВНЗ</h2>
+      <%- include ../partials/messages %>
+      <form action="/users/register" method="POST">
+        <div id="block_middle_info_inside_buttons">
+          <label class="p_sing" for="name">Ведіть ім'я</label>
+          <input
+                  type="name"
+                  id="name"
+                  name="name"
+                  class="txt_field"
+                  placeholder="Введіть ім'я"
+                  value="<%= typeof name != 'undefined' ? name : '' %>"
+          />
+          <label class="p_sing" for="email">Введіть електронну пошту</label>
+          <input
+                  type="email"
+                  id="email"
+                  name="email"
+                  class="txt_field"
+                  placeholder="e-mail"
+                  value="<%= typeof email != 'undefined' ? email : '' %>"
+          />
+          <label class="p_sing" for="password">Введіть пароль</label>
+          <input
+                  type="password"
+                  id="password"
+                  name="password"
+                  class="txt_field"
+                  placeholder="Введіть пароль"
+                  value="<%= typeof password != 'undefined' ? password : '' %>"
+          />
+          <label class="p_sing" for="password2">Підтвердіть пароль</label>
+          <input
+                  type="password"
+                  id="password2"
+                  name="password2"
+                  class="txt_field"
+                  placeholder="Підтвердіть пароль"
+                  value="<%= typeof password2 != 'undefined' ? password2 : '' %>"
+          />
+          </div>
+        <button type="submit" class="button_top_sing">Зареєструвати</button>
+      </form>
+      <p class="lead mt-4">Вже маєте обліковий запис? <a class="button_top_sing" href="/users/login">Ввійти</a></p>
+      </div>
+    </div>
+  </div>
+<div id="block_bottom">
+  <h1 class="h1_bot">© Проект розроблено курсантом 281 навчальної групи </h1>
+  <h1 class="h1_bot">пані КОВБА Мирославою Андріївною</h1>
+</div>
+</body>
+</html>

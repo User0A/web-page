@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>HOME | Web page</title>
+</head>
+<body>
+<div id="block_top">
+  <div id="block_top_left">
+    <div id="block_top_left_img">
+
+    </div>
+    <div id="block_top_left_txt">
+      <a><h1 id="h1_top">Teхнологія розробки програмних продуктів</h1></a>
+      <h2>Облік лікарських засобів</h2>
+    </div>
+  </div>
+  <div id="block_top_right">
+    <div id="block_top_right_buttons">
+      <div id="block_top_right_buttons_all">
+        <button class="button_top" type="submit">Головна</button>
+        <button class="button_top" type="submit">База</button>
+        <button class="button_top" type="submit">Детальніше</button>
+      </div>
+    </div>
+  </div>
+</div>
+<div id="block_middle">
+  <div id="block_middle_info">
+    <div id="block_middle_info_inside">
+      <h2>Ласкаво просимо до програми обліку лікарських засобів військових шпиталів </h2>
+      <%- include('../header'); -%>
+      <div class="container">
+        <h3 class="yellow_txt"><a href="/industries">Список виробників</a></h3>
+        <h1 class="yellow_txt">Редагувати виробника</h1>
+        <form action="/industries/update/<%= industry._id%>" method="post">
+          <table>
+            <tbody>
+            <tr>
+              <td class="p_sing">Name</td>
+              <td><input class="txt_field" type="text" name="name" value="<%= industry.name %>" /></td>
+            </tr>
+            <tr>
+              <td colspan="2"><button class="button_top_sing" type="submit">Update</button></td>
+            </tr>
+            </tbody>
+          </table>
+        </form>
+      </div>
+    </div>
+  </div>
+  <div>
+
+  </div>
+</div>
+<div id="block_bottom">
+  <h1 class="h1_bot">© Проект розроблено курсантом 281 навчальної групи </h1>
+  <h1 class="h1_bot">пані ЛАВРИК Мирославою Андріївною</h1>
+</div>
+</body>
+</html>

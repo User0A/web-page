@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>HOME | Web page</title>
+    <link rel="stylesheet" href="../index.css">
+</head>
+<body>
+<div id="block_top">
+    <div id="block_top_left">
+        <div id="block_top_left_img"></div>
+        <div id="block_top_left_txt">
+            <a><h1 id="h1_top">Веб-тeхнології та веб-дизайн</h1></a>
+            <h2>Служба озброєння ВВНЗ</h2>
+        </div>
+    </div>
+    <div id="block_top_right">
+        <div id="block_top_right_buttons">
+            <div id="block_top_right_buttons_all">
+                <button class="button_top" type="submit">Головна</button>
+                <button class="button_top" type="submit">База</button>
+                <button class="button_top" type="submit">Детальніше</button>
+            </div>
+        </div>
+    </div>
+</div>
+<div id="block_middle">
+    <div id="block_middle_info">
+        <div id="block_middle_info_inside">
+            <h2>Ласкаво просимо до веб-порталу служби озброэння ВВНЗ </h2>
+            <%- include('../header'); -%>
+            <div class="container">
+                <h3 class="yellow_txt"><a class="button_top_sing" href="/hospitals">Зведена таблиця даних</a></h3>
+                <h1 class="yellow_txt">Подробиці</h1>
+                <table class="list-table">
+                    <tbody>
+                    <tr class="table_data">
+                        <td class="p_sing">Name</td>
+                        <td>:</td>
+                        <td><%= hospital.name %></td>
+                    </tr>
+                    <tr>
+                        <td class="p_sing">Region</td>
+                        <td>:</td>
+                        <td><%= hospital.region %></td>
+                    </tr>
+                    </tbody>
+                </table>
+                <% if (admin) { %>
+                    <h3 class="yellow_txt"><a class="button_top_sing" href="/hospitals/edit/<%= hospital._id%>">EDIT</a></h3>
+                    <form action="/hospitals/delete/<%= hospital._id%>" method="post">
+                        <button class="button_top_sing" type="submit">DELETE</button>
+                    </form>
+                <% } %>
+            </div>
+        </div>
+    </div>
+    <div>
+
+    </div>
+</div>
+<div id="block_bottom">
+    <h1 class="h1_bot">© Проект розроблено курсантом 281 навчальної групи </h1>
+    <h1 class="h1_bot">пані КОВБА Мирославою Андріївною</h1>
+</div>
+</body>
+</html>

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<head>
+  <meta charset="UTF-8">
+  <title>SING IN | Web page</title>
+  <link rel="stylesheet" href="../index.css">
+</head>
+<body>
+
+<div id="block_top">
+  <div id="block_top_left">
+    <div id="block_top_left_img">
+
+    </div>
+    <div id="block_top_left_txt">
+      <a><h1 id="h1_top">Веб-технології та веб-дизайн</h1></a>
+      <h2>Служба озброєння ВВНЗ</h2>
+    </div>
+  </div>
+  <div id="block_top_right">
+    <div id="block_top_right_buttons">
+      <div id="block_top_right_buttons_all">
+        <h3 id="block_top_right_txt">| Авторизація</h3>
+      </div>
+    </div>
+  </div>
+</div>
+<div id="block_middle_sing">
+  <div id="block_middle_info_sing">
+    <div id="block_middle_info_inside">
+      <h2>Ласкаво просимо до веб-порталу служби озброєння ВВНЗ</h2>
+       <% include ../partials/messages %>
+              <form action="/users/login" method="POST">
+                <div class="form-group">
+                  <label class="p_sing"  for="email">E-mail</label>
+                  <input
+                          type="email"
+                          id="email"
+                          name="email"
+                          class="txt_field"
+                          placeholder="Введіть e-mail"
+                  />
+                </div>
+                <div class="form-group">
+                  <label class="p_sing" for="password">Пароль</label>
+                  <input
+                          type="password"
+                          id="password"
+                          name="password"
+                          class="txt_field"
+                          placeholder="Введіть пароль"
+                  />
+                </div>
+                <div>
+                  <button class="button_top_sing" type="submit">Ввійти</button>
+                </div>
+              </form>
+              <p class="p_on_black">
+                Ще не маєте облікового запису? <a class="button_top_sing" href="/users/register">Зареєструватися</a>
+              </p>
+      </div>
+    </div>
+  </div>
+<div id="block_bottom">
+  <h1 class="h1_bot">© Проект розроблено курсантом 281 навчальної групи </h1>
+  <h1 class="h1_bot">пані КОВБА Мирославою Андріївною</h1>
+</div>
+</body>
+</html>
