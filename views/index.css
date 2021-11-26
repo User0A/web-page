@@ -3,6 +3,7 @@ body{
     flex-direction: column;
     background-color: silver;
     background-image: url("main.jpg");
+    background-attachment: fixed;
 }
 a:active{
     color: white;
@@ -115,7 +116,7 @@ h2{
 }
 #block_middle{
     display: flex;
-    justify-content: center;
+    justify-items: center;
     height: 800px;
     width: 100%;
     background-size: 100%;
@@ -142,7 +143,6 @@ h2{
 #block_middle_info{
     display: flex;
     justify-content: center;
-    align-items: center;
 }
 #block_middle_info_inside{
     display: flex;
@@ -222,11 +222,8 @@ h2{
     color: yellow;
     font-weight: bold;
 }
-/*
-.container{
-    width: 310px;
-    height: 300px;
-}*/
+
+/* PAGE GALLERY START */
 .slider-line{
     height: 256px;
     width: 2048px;
@@ -288,7 +285,7 @@ h2{
     height: 256px;
 }
 #block_bottom_gallery{
-    margin-top: 150px;
+    margin-top: 370px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -296,3 +293,66 @@ h2{
     background-color: black;
     padding: 10px;
 }
+/* PAGE GALLERY ENDED */
+
+/* PAGE NEWS START */
+
+.block_middle_news{
+    display: flex;
+    flex-direction: row;
+}
+.block_middle_news_info{
+}
+
+#block_middle_info_inside_news{
+    margin-top: 2100px;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    border-radius: 20px;
+    padding: 15px;
+    background-color:  rgba(0, 0, 0, 0.7);
+
+}
+#block_bottom_news{
+    margin-top: 2500px;
+    display: flex;
+    flex-shrink: 0;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    background-color: black;
+    padding: 10px;
+}
+/* PAGE NEWS ENDED */
+/* PAGE Dashboard */
+#block_middle_info_inside_dash{
+    margin-top: 800px;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    border-radius: 20px;
+    padding: 15px;
+    background-color:  rgba(0, 0, 0, 0.7)
+
+}
+#block_bottom_dash{
+    margin-top: 2900px;
+    display: flex;
+    flex-shrink: 0;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    background-color: black;
+    padding: 10px;
+}
+#block_middle_info_inside_dash_db{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    border-radius: 20px;
+    padding: 15px;
+    background-color:  rgba(0, 0, 0, 0.7);
+    margin-left: 700px;
+}
+/* END */
