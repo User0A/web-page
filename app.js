@@ -13,8 +13,8 @@ require('./config/passport')(passport);
 // Connect to MongoDB
 mongoose
   .connect(
-      "mongodb://localhost/persons",
-    { useNewUrlParser: true ,useUnifiedTopology: true}
+      "mongodb+srv://user0A:Ruhanchaokey1@cluster0.0yzhj.mongodb.net/myFirstDatabase?retryWrites=true&w=majority",
+    {useNewUrlParser: true ,useUnifiedTopology: true}
   )
   .then(() => console.log('MongoDB Connected'))
   .catch(err => console.log(err));
@@ -65,7 +65,7 @@ app.use('/illnesshospitals', require('./routes/illnesshospitals.js'));
 
 
 let port = process.env.PORT;
-if (port==null || port== ""){
+if (port==null || port=== ""){
     port = 3000;
 }
 app.listen(port, console.log(`Server running on  ${port}`));
