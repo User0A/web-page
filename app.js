@@ -54,14 +54,7 @@ app.use(function(req, res, next) {
 // Routes
 app.use('/', require('./routes/index.js'));
 app.use('/users', require('./routes/users.js'));
-app.use('/illnesses', require('./routes/illnesses.js'));
 app.use('/hospitals', require('./routes/hospitals.js'));
-app.use('/industries', require('./routes/industries.js'));
-app.use('/pills', require('./routes/pills.js'));
-app.use('/providers', require('./routes/providers.js'));
-app.use('/providerpills', require('./routes/providerpills.js'));
-app.use('/industryproviders', require('./routes/industryproviders.js'));
-app.use('/illnesshospitals', require('./routes/illnesshospitals.js'));
 
 
 let port = process.env.PORT;
